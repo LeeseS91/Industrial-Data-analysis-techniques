@@ -1,0 +1,24 @@
+% Finds the unique values for the matrix patterns, and disruption factors.
+% It also finds the order of these things from most occuring to least
+% occuring.
+% EXAMPLES
+% [y,i,countarray2]=arraycount(matrixarray2, uniqueno);
+% [y2,i2,countarray2]=arraycount(disruptfact, uniquedisrupt);
+% newplot=matrixarray==uniqueno(i(1));
+
+function [y,i,countarray]=arraycount(array, unique)
+
+countarray=zeros(size(unique));
+
+
+for k = 1:length(countarray)
+    countarray(k)=length(array(array == k));
+end
+
+        
+[y,i]=sort(countarray,2,'descend');
+
+% EXAMPLES
+% [y,i,countarray2]=arraycount(matrixarray2, uniqueno);
+% [y2,i2,countarray2]=arraycount(disruptfact, uniquedisrupt);
+% newplot=matrixarray==uniqueno(i(1));

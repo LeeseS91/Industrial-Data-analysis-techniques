@@ -1,0 +1,10 @@
+matrixarray=zeros(1, 2001);
+for q=1:2001
+     matrixarray(q)=mynewsum(data, q:q);
+end
+
+uniqueno=unique(matrixarray);
+
+while i<=163;
+    for p=1:2001
+        

@@ -1,0 +1,10 @@
+% Creates a subplot of all the 25 columns in the ord
+
+function myplotter2(a, b)
+figure
+hold on;
+for i=1:length(a)
+    subplot(5,5,i),plot(a,b(:,i))   
+    
+end
+hold off;

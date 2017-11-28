@@ -1,0 +1,17 @@
+% This function plots the data, and all the points at which the matrix
+% patterns occur, determined by t
+
+function newplot=patternplot(matrixarray, uniqueno, index, dist, range, data)
+figure
+hold on
+grid on
+for p=range
+    newplot=matrixarray==uniqueno(index(p));
+    plot(dist,newplot, 'b.', dist, data)
+end
+newplot;
+
+% EXAMPLE
+% patternplot(matrixarray, uniqueno,i,dist,1:10, data);
+    
+    
